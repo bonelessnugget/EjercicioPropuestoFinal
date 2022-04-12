@@ -7,15 +7,23 @@ fetch('./prediccionesZaragoza.json')
       for (let dato of datos) {
         console.log(dato);
       }
+    viento1 = datos[0].prediccion.dia[0].viento;
+    precipitacion1 = datos[0].prediccion.dia[0].probPrecipitacion;
     document.getElementById("dia1").addEventListener("click", function(){
-       
         for (var i = 0; i<datos.length; i++){
             document.getElementById("txt-temperatura").innerHTML = (datos[i].prediccion.dia[0].temperatura.maxima + datos[i].prediccion.dia[0].temperatura.minima) / 2 + " º";
-
-        }
-
-        for (var i = 0; i<datos.viento.length; i++){
-            console.log(datos[i].prediccion.dia[0].viento[i].velocidad);
+            mediaViento = 0;
+          for (let j = 0; j<viento1.length; j++){
+            mediaViento += viento1[j].velocidad;
+          }
+            mediaViento /= 7;
+            document.getElementById("viento-txt").innerHTML = Math.trunc(mediaViento) + " km/h";
+            mediaPrec = 0;
+          for (let prob = 0; prob<precipitacion1.length; prob++){
+            mediaPrec += precipitacion1[prob].value;
+          }
+          mediaPrec /= precipitacion1.length;
+            document.getElementById("precipitacion-txt").innerHTML = Math.trunc(mediaPrec) + " %";
         }
     });
     
