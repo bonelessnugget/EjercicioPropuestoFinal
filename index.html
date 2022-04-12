@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <script src="daotsJson.js"></script>
+    <div id="calendario-popup">
+        <div class="month">
+            <ul>
+              <li>August<br><span style="font-size:18px">2021</span></li>
+              <button onclick="cerrarCalendario()">Cerrar</button>
+            </ul>
+          </div>
+          <ul class="weekdays">
+            <li>L</li>
+            <li>M</li>
+            <li>X</li>
+            <li>J</li>
+            <li>V</li>
+            <li>S</li>
+            <li>D</li>
+          </ul>
+          
+          <ul class="days">
+            <li ><input type="button" value="1" id="dia1" onclick="cerrarCalendario()"></li>
+            <li ><input type="button" value="2" id="dia2" onclick="cerrarCalendario()"></li>
+            <li ><input type="button" value="3" id="dia3" onclick="cerrarCalendario()"></li>
+            <li ><input type="button" value="4" id="dia4" onclick="cerrarCalendario()"></li>
+            <li ><input type="button" value="5" id="dia5" onclick="cerrarCalendario()"></li>
+            <li ><input type="button" value="6" id="dia6" onclick="cerrarCalendario()"></li>
+            <li ><input type="button" value="7" id="dia6" onclick="cerrarCalendario()"></li>
+          </ul> 
+    </div>
+    <div id="principal">
+        <div id="primero">
+            <div id="pin"><embed src="imagenes/location-pin-svgrepo-com (1).svg" type=""></div>
+            <div id="nombreCiudad">Zaragoza</div>
+            <div id="calendario"><button onclick="abrirCalendario()"><embed src="imagenes/calendar-svgrepo-com.svg"></input></div>
+        </div>
+        <div id="segundo">
+            <div id="tiempo-icono"><embed src="imagenes/a_1_sunny.svg" type="" class="icono-principal"></div>
+            <div id="text-informativo">Mucho Calor</div>
+            <div id="txt-temperatura">30º</div>
+            <div id="segundo-tempViento">
+                <div id="viendo"><embed src="imagenes/f_3_windy.svg" type="" class="icono-secundario"></div>
+                    <div id="viento-txt">90 km/h</div>
+                <div id="precipitacion"><embed src="imagenes/g_4_waterdrop.svg" type="" class="icono-secundario"></div>
+                    <div id="precipitacion-txt">999%</div>
+            </div>
+        </div>
+        <div id="tercero">
+            <div id="fechas">
+                <div id="fechas1">Today, 18 Sept</div>
+                <div id="fechas2">Monday, 19 Sept</div>
+                <div id="fechas3">Tue, 20 Sept</div>
+            </div>
+            <div id="cuadros">
+                <div id="cuadro1">
+                    <div id="hora">9:00 AM</div>
+                    <div id="icono"><embed src="imagenes/a_1_sunny.svg" type=""></div>
+                    <div id="temp">27º</div>
+                </div>
+                <div id="cuadro2">
+                    <div id="hora">10:00 AM</div>
+                    <div id="icono"><embed src="imagenes/a_2_little_sunny.svg" type=""></div>
+                    <div id="temp">29º</div>
+                </div>
+                <div id="cuadro3">
+                    <div id="hora">11:00 AM</div>
+                    <div id="icono"><embed src="imagenes/c_4_lightning.svg" type=""></div>
+                    <div id="temp">30º</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
