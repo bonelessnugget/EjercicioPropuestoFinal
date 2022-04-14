@@ -8,7 +8,8 @@ fetch('./prediccionesZaragoza.json')
         console.log(dato);
       }
     document.getElementById("dia1").addEventListener("click", function(){
-       
+      prueba = document.getElementById("pruebaSVG");
+       prueba.src = "./imagenes/a_2_little_sunny.svg";
         for (var i = 0; i<datos.length; i++){
             document.getElementById("txt-temperatura").innerHTML = (datos[i].prediccion.dia[0].temperatura.maxima + datos[i].prediccion.dia[0].temperatura.minima) / 2 + " º";
 
