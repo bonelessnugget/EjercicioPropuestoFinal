@@ -1,57 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
+
 <body>
-    <script src="daotsJson.js"></script>
-    <div id="calendario-popup">
-        <div class="month">
-            <ul>
-              <li>August<br><span style="font-size:18px">2021</span></li>
-              <button onclick="cerrarCalendario()">Cerrar</button>
-            </ul>
-          </div>
-          <ul class="weekdays">
-            <li>L</li>
-            <li>M</li>
-            <li>X</li>
-            <li>J</li>
-            <li>V</li>
-            <li>S</li>
-            <li>D</li>
-          </ul>
-          
-          <ul class="days">
-            <li ><input type="button" value="1" id="dia1" onclick="cerrarCalendario()"></li>
-            <li ><input type="button" value="2" id="dia2" onclick="cerrarCalendario()"></li>
-            <li ><input type="button" value="3" id="dia3" onclick="cerrarCalendario()"></li>
-            <li ><input type="button" value="4" id="dia4" onclick="cerrarCalendario()"></li>
-            <li ><input type="button" value="5" id="dia5" onclick="cerrarCalendario()"></li>
-            <li ><input type="button" value="6" id="dia6" onclick="cerrarCalendario()"></li>
-            <li ><input type="button" value="7" id="dia6" onclick="cerrarCalendario()"></li>
-          </ul> 
+    <div id="calendario">
+        <div id="mes">
+            <h3>Abril, 2022</h3>
+        </div>
+        <div id="dia">
+            <p>L</p>
+            <p>M</p>
+            <p>X</p>
+            <p>J</p>
+            <p>V</p>
+            <p>S</p>
+            <p>D</p>
+        </div>
+        <div id="dias">
+            <button id="dia1">1</button>
+            <button id="dia2">2</button>
+            <button id="dia3">3</button>
+            <button id="dia4">4</button>
+            <button id="dia5">5</button>
+            <button id="dia6">6</button>
+            <button id="dia7">7</button>
+        </div>
     </div>
     <div id="principal">
         <div id="primero">
             <div id="pin"><embed src="imagenes/location-pin-svgrepo-com (1).svg" type=""></div>
             <div id="nombreCiudad">Zaragoza</div>
-            <div id="calendario"><button onclick="abrirCalendario()"><embed src="imagenes/calendar-svgrepo-com.svg"></input></div>
+            <div id="calendarioSVG" onclick="verCalendario()"><embed src="imagenes/calendar-svgrepo-com.svg" id="calendarioBoton" onclick="verCalendario()"></div>
         </div>
         <div id="segundo">
-            <div id="tiempo-icono"><embed src="imagenes/a_1_sunny.svg" type="" class="icono-principal" id="pruebaSVG"></div>
+            <div id="tiempo-icono"><embed src="imagenes/a_1_sunny.svg" type="" class="icono-principal" id="svgTiempo">
+            </div>
             <div id="text-informativo">Mucho Calor</div>
             <div id="txt-temperatura">30º</div>
             <div id="segundo-tempViento">
                 <div id="viendo"><embed src="imagenes/f_3_windy.svg" type="" class="icono-secundario"></div>
-                    <div id="viento-txt">90 km/h</div>
+                <div id="viento-txt">90 km/h</div>
                 <div id="precipitacion"><embed src="imagenes/g_4_waterdrop.svg" type="" class="icono-secundario"></div>
-                    <div id="precipitacion-txt">999%</div>
+                <div id="precipitacion-txt">999%</div>
             </div>
         </div>
         <div id="tercero">
@@ -62,22 +59,23 @@
             </div>
             <div id="cuadros">
                 <div id="cuadro1">
-                    <div id="hora">9:00 AM</div>
-                    <div id="icono"><embed src="imagenes/a_1_sunny.svg" type=""></div>
-                    <div id="temp">27º</div>
+                    <div id="hora1">9:00 AM</div>
+                    <div id="icono1"><embed src="imagenes/a_1_sunny.svg" type="" id="icono1SVG"></div>
+                    <div id="temp1">27º</div>
                 </div>
                 <div id="cuadro2">
-                    <div id="hora">10:00 AM</div>
-                    <div id="icono"><embed src="imagenes/a_2_little_sunny.svg" type=""></div>
-                    <div id="temp">29º</div>
+                    <div id="hora2">10:00 AM</div>
+                    <div id="icono2"><embed src="imagenes/a_2_little_sunny.svg" type="" id="icono2SVG"></div>
+                    <div id="temp2">29º</div>
                 </div>
                 <div id="cuadro3">
-                    <div id="hora">11:00 AM</div>
-                    <div id="icono"><embed src="imagenes/c_4_lightning.svg" type=""></div>
-                    <div id="temp">30º</div>
+                    <div id="hora3">11:00 AM</div>
+                    <div id="icono3"><embed src="imagenes/c_4_lightning.svg" type="" id="icono3SVG"></div>
+                    <div id="temp3">30º</div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="principal.js"></script>
 </body>
 </html>

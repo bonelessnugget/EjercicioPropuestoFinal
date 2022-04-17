@@ -12,7 +12,6 @@ embed {
 }
 #principal{
     display: flex;
-    border: 1px solid grey;
     flex-direction: column;
     align-items: center;
     width: fit-content;
@@ -21,6 +20,7 @@ embed {
     padding-top: 20px;
     padding-left: 10px;
     padding: 40px;
+    border-radius: 5%;
 }
 
 #primero{
@@ -32,7 +32,7 @@ embed {
     padding-left: 5px;
 }
 
-#calendario{
+#calendarioSVG{
 padding-left: 60%;
 
 }
@@ -102,6 +102,9 @@ padding-left: 60%;
     margin: 15px;
     padding-top: 15px;
     text-align: center;
+    background: rgba(204, 204, 204, 0.3);
+    border-radius: 10%;
+    padding: 20px;
 }
 
 #cuadro1 embed, #cuadro2 embed, #cuadro3 embed{
@@ -109,85 +112,42 @@ height: 50px;
 width: 50px;
 }
 
-#calendario button{
-    background: transparent;
-    border: none !important;
-    font-size: 0;
+#calendario{
+    display: none;
+    margin-right: 100px;
+    animation-name: prueba;
+    animation-duration: 0.5s;
+}
+
+@keyframes prueba {
+    from {
+        margin-right: 0;
+    }
+    to {
+        margin-right: 100px;
+    }
+}
+
+#dia{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#dia p{
+    margin: 11px;
+}
+
+#dias{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#dias button{
+    margin: 5px;
 }
 
 
-/*Calendario de W3 School */
-
-ul {list-style-type: none;}
-
-/* Month header */
-.month {
-  padding: 70px 25px;
-  width: 100%;
-  background: #1abc9c;
-  text-align: center;
-}
-
-/* Month list */
-.month ul {
-  margin: 0;
-  padding: 0;
-}
-
-.month ul li {
-  color: white;
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-/* Previous button inside month header */
-.month .prev {
-  float: left;
-  padding-top: 10px;
-}
-
-/* Next button */
-.month .next {
-  float: right;
-  padding-top: 10px;
-}
-
-/* Weekdays (Mon-Sun) */
-.weekdays {
-  margin: 0;
-  padding: 10px 0;
-  background-color:#ddd;
-}
-
-.weekdays li {
-  display: inline-block;
-  width: 13%;
-  color: #666;
-  text-align: center;
-}
-
-/* Days (1-31) */
-.days {
-  padding: 10px 0;
-  background: #eee;
-  margin: 0;
-}
-
-.days li {
-  list-style-type: none;
-  display: inline-block;
-  width: 13%;
-  text-align: center;
-  margin-bottom: 5px;
-  font-size:12px;
-  color: #777;
-}
-
-/* Highlight the "current" day */
-.days li .active {
-  padding: 5px;
-  background: #1abc9c;
-  color: white !important
-}
-/*Calendario Prueba*/
