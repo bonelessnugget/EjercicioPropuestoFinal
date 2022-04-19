@@ -182,6 +182,3 @@ function sleep(ms) {
 function cerrarCalendario(){
 document.getElementById("calendario").style.display = "none";
 }
-
-
-
