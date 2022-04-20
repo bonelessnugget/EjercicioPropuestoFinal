@@ -79,7 +79,9 @@ function json(argumentoA, argumentoB) {
       return response.json()
     })
     .then((datos) => {
-
+      for (let i = 0; i<datos.length; i++){
+        console.log(datos[i])
+      }
       argumentoB.addEventListener("click", function () {
         viento1 = datos[0].prediccion.dia[argumentoA].viento;
         precipitacion1 = datos[0].prediccion.dia[argumentoA].probPrecipitacion;
@@ -92,8 +94,8 @@ function json(argumentoA, argumentoB) {
           }
         }
         if (estadoCieloFinal[aleatorio].descripcion === 'Cubierto') {
-          document.getElementById("svgTiempo").src = "./imagenes/b_1_partly_cloudy.svg";
-          document.getElementById("icono1SVG").src = "./imagenes/b_1_partly_cloudy.svg";
+          document.getElementById("svgTiempo").src = "./imagenes/b_2_cloudy.svg";
+          document.getElementById("icono1SVG").src = "./imagenes/b_2_cloudy.svg";
           document.getElementById("principal").style.background = "linear-gradient(180deg, rgba(185,185,185,1) 0%, rgba(159,159,159,1) 90%, rgba(112,112,112,1) 100%)";
         }else if (estadoCieloFinal[aleatorio].descripcion === 'Muy nubos'){
           document.getElementById("svgTiempo").src = "./imagenes/b_3_very_cloudy.svg";
@@ -114,6 +116,10 @@ function json(argumentoA, argumentoB) {
         }else if (estadoCieloFinal[aleatorio].descripcion === 'Intervalos nubosos'){
           document.getElementById("svgTiempo").src = "./imagenes/b_1_partly_cloudy.svg";
           document.getElementById("icono1SVG").src = "./imagenes/b_1_partly_cloudy.svg";
+          document.getElementById("principal").style.background = "linear-gradient(180deg, rgba(185,185,185,1) 0%, rgba(159,159,159,1) 90%, rgba(112,112,112,1) 100%)";
+        }else if (estadoCieloFinal[aleatorio].descripcion === "Nubes altas"){
+          document.getElementById("svgTiempo").src = "./imagenes/b_2_cloudy.svg";
+          document.getElementById("icono1SVG").src = "./imagenes/b_2_cloudy.svg";
           document.getElementById("principal").style.background = "linear-gradient(180deg, rgba(185,185,185,1) 0%, rgba(159,159,159,1) 90%, rgba(112,112,112,1) 100%)";
         }
         document.getElementById("text-informativo").innerHTML = estadoCieloFinal[aleatorio].descripcion;
@@ -174,11 +180,6 @@ function json(argumentoA, argumentoB) {
       // Do something for an error here
     });
 }
-
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 function cerrarCalendario(){
 document.getElementById("calendario").style.display = "none";
 }
